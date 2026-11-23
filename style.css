@@ -1,0 +1,103 @@
+:root {
+      --era-accent: #C87D28;
+      --era-tint: #EFE9DA;
+    }
+
+    body {
+      background-color: #F4F0E6;
+      color: #1C1B18;
+      background-image:
+        radial-gradient(rgba(28, 27, 24, 0.055) 1px, transparent 0),
+        radial-gradient(rgba(200, 125, 40, 0.04) 1px, transparent 0);
+      background-size: 20px 20px, 31px 31px;
+      background-position: 0 0, 11px 13px;
+      overflow-x: hidden;
+    }
+
+    /* Tactile Print & Instrument Cards */
+    .instrument-card {
+      background-color: #FAF7F0;
+      border: 2px solid #1C1B18;
+      box-shadow: 4px 4px 0px #1C1B18;
+      transition: background-color 0.45s ease, transform 0.15s ease;
+    }
+
+    .instrument-card-sm {
+      background-color: #F4F0E6;
+      border: 1.5px solid #1C1B18;
+      box-shadow: 2px 2px 0px #1C1B18;
+    }
+
+    .tactile-btn {
+      border: 2px solid #1C1B18;
+      box-shadow: 3px 3px 0px #1C1B18;
+      transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.2s ease;
+    }
+    .tactile-btn:hover:not(:disabled) {
+      transform: translate(-1px, -1px);
+      box-shadow: 4px 4px 0px #1C1B18;
+    }
+    .tactile-btn:active:not(:disabled) {
+      transform: translate(2px, 2px);
+      box-shadow: 1px 1px 0px #1C1B18;
+    }
+    .tactile-btn:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+      box-shadow: 1px 1px 0px #1C1B18;
+    }
+
+    /* Engraved Odometer Drum Styling */
+    .odometer-drum {
+      background: #1C1B18;
+      color: #F4F0E6;
+      border: 2px solid #1C1B18;
+      box-shadow: inset 0 2px 5px rgba(0,0,0,0.65);
+    }
+
+    /* Glass & Brass Sight-Tube Fuel Gauge */
+    .sight-glass {
+      background: linear-gradient(90deg, rgba(28,27,24,0.12) 0%, rgba(255,255,255,0.45) 35%, rgba(28,27,24,0.08) 100%), #E5DEC9;
+      border: 2px solid #1C1B18;
+      position: relative;
+      overflow: hidden;
+    }
+    .sight-liquid {
+      background: repeating-linear-gradient(
+        -45deg,
+        #C87D28,
+        #C87D28 8px,
+        #D9913B 8px,
+        #D9913B 16px
+      );
+      transition: width 0.55s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.3s ease;
+    }
+    .sight-liquid.burning {
+      background: repeating-linear-gradient(
+        -45deg,
+        #2E6F5E,
+        #2E6F5E 8px,
+        #3D8B76 8px,
+        #3D8B76 16px
+      );
+    }
+
+    /* Era stamp badge transition */
+    .era-badge-dynamic {
+      background-color: var(--era-accent);
+      color: #FAF7F0;
+      border: 1.5px solid #1C1B18;
+      transition: background-color 0.45s ease;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #EAE3D2;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1C1B18;
+      border-radius: 9999px;
+    }

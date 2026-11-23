@@ -1,0 +1,2000 @@
+{
+  "schemaVersion": 1,
+  "scope": "European sovereign states, Kosovo, and selected dependent/autonomous territories",
+  "countryCount": 58,
+  "countries": [
+    {
+      "id": "albania",
+      "name": "Albania",
+      "capital": "Tirana",
+      "lat": 41.3275,
+      "lon": 19.8187,
+      "tags": [
+        "adriatic",
+        "balkan",
+        "europe",
+        "majority_muslim",
+        "mediterranean",
+        "non_eu"
+      ],
+      "aliases": [
+        "Shqipëria"
+      ],
+      "status": "sovereign"
+    },
+    {
+      "id": "andorra",
+      "name": "Andorra",
+      "capital": "Andorra la Vella",
+      "lat": 42.5063,
+      "lon": 1.5218,
+      "tags": [
+        "europe",
+        "landlocked",
+        "majority_christian",
+        "microstate",
+        "no_standing_army",
+        "non_eu",
+        "pyrenees"
+      ],
+      "aliases": [],
+      "status": "sovereign"
+    },
+    {
+      "id": "armenia",
+      "name": "Armenia",
+      "capital": "Yerevan",
+      "lat": 40.1792,
+      "lon": 44.4991,
+      "tags": [
+        "caucasus",
+        "europe",
+        "landlocked",
+        "majority_christian",
+        "non_eu",
+        "orthodox",
+        "transcontinental"
+      ],
+      "aliases": [],
+      "status": "sovereign"
+    },
+    {
+      "id": "austria",
+      "name": "Austria",
+      "capital": "Vienna",
+      "lat": 48.2082,
+      "lon": 16.3738,
+      "tags": [
+        "alps",
+        "eu",
+        "europe",
+        "eurozone",
+        "former_austro_hungarian",
+        "german_official",
+        "landlocked",
+        "majority_christian",
+        "many_borders",
+        "schengen"
+      ],
+      "aliases": [
+        "Österreich"
+      ],
+      "status": "sovereign"
+    },
+    {
+      "id": "azerbaijan",
+      "name": "Azerbaijan",
+      "capital": "Baku",
+      "lat": 40.4093,
+      "lon": 49.8671,
+      "tags": [
+        "black_sea",
+        "caspian",
+        "caucasus",
+        "europe",
+        "majority_muslim",
+        "non_eu",
+        "transcontinental"
+      ],
+      "aliases": [],
+      "status": "sovereign"
+    },
+    {
+      "id": "belarus",
+      "name": "Belarus",
+      "capital": "Minsk",
+      "lat": 53.9006,
+      "lon": 27.559,
+      "tags": [
+        "europe",
+        "former_ussr",
+        "landlocked",
+        "majority_christian",
+        "non_eu",
+        "orthodox",
+        "slavic"
+      ],
+      "aliases": [],
+      "status": "sovereign"
+    },
+    {
+      "id": "belgium",
+      "name": "Belgium",
+      "capital": "Brussels",
+      "lat": 50.8503,
+      "lon": 4.3517,
+      "tags": [
+        "benelux",
+        "coastal",
+        "eu",
+        "europe",
+        "eurozone",
+        "german_official",
+        "majority_christian",
+        "monarchy",
+        "schengen"
+      ],
+      "aliases": [
+        "België",
+        "Belgique"
+      ],
+      "status": "sovereign"
+    },
+    {
+      "id": "bosnia-and-herzegovina",
+      "name": "Bosnia and Herzegovina",
+      "capital": "Sarajevo",
+      "lat": 43.8563,
+      "lon": 18.4131,
+      "tags": [
+        "adriatic",
+        "balkan",
+        "europe",
+        "former_yugoslavia",
+        "majority_muslim",
+        "non_eu"
+      ],
+      "aliases": [
+        "Bosnia",
+        "Bosnia-Herzegovina"
+      ],
+      "status": "sovereign"
+    },
+    {
+      "id": "bulgaria",
+      "name": "Bulgaria",
+      "capital": "Sofia",
+      "lat": 42.6977,
+      "lon": 23.3219,
+      "tags": [
+        "balkan",
+        "black_sea",
+        "eu",
+        "europe",
+        "eurozone",
+        "former_ottoman",
+        "majority_christian",
+        "orthodox",
+        "schengen",
+        "slavic"
+      ],
+      "aliases": [],
+      "status": "sovereign"
+    },
+    {
+      "id": "croatia",
+      "name": "Croatia",
+      "capital": "Zagreb",
+      "lat": 45.815,
+      "lon": 15.9819,
+      "tags": [
+        "adriatic",
+        "balkan",
+        "eu",
+        "europe",
+        "eurozone",
+        "former_austro_hungarian",
+        "former_yugoslavia",
+        "majority_christian",
+        "mediterranean",
+        "schengen"
+      ],
+      "aliases": [
+        "Hrvatska"
+      ],
+      "status": "sovereign"
+    },
+    {
+      "id": "cyprus",
+      "name": "Cyprus",
+      "capital": "Nicosia",
+      "lat": 35.1856,
+      "lon": 33.3823,
+      "tags": [
+        "eu",
+        "europe",
+        "eurozone",
+        "island",
+        "majority_christian",
+        "mediterranean",
+        "orthodox"
+      ],
+      "aliases": [
+        "Republic of Cyprus"
+      ],
+      "status": "sovereign"
+    },
+    {
+      "id": "czechia",
+      "name": "Czechia",
+      "capital": "Prague",
+      "lat": 50.0755,
+      "lon": 14.4378,
+      "tags": [
+        "eu",
+        "europe",
+        "former_austro_hungarian",
+        "landlocked",
+        "majority_christian",
+        "schengen",
+        "slavic"
+      ],
+      "aliases": [
+        "Czech Republic",
+        "Česko"
+      ],
+      "status": "sovereign"
+    },
+    {
+      "id": "denmark",
+      "name": "Denmark",
+      "capital": "Copenhagen",
+      "lat": 55.6761,
+      "lon": 12.5683,
+      "tags": [
+        "arctic",
+        "baltic_sea",
+        "coastal",
+        "eu",
+        "europe",
+        "island",
+        "majority_christian",
+        "monarchy",
+        "nordic",
+        "schengen"
+      ],
+      "aliases": [
+        "Danmark"
+      ],
+      "status": "sovereign"
+    },
+    {
+      "id": "estonia",
+      "name": "Estonia",
+      "capital": "Tallinn",
+      "lat": 59.437,
+      "lon": 24.7536,
+      "tags": [
+        "baltic",
+        "baltic_sea",
+        "coastal",
+        "eu",
+        "europe",
+        "eurozone",
+        "former_ussr",
+        "schengen"
+      ],
+      "aliases": [
+        "Eesti"
+      ],
+      "status": "sovereign"
+    },
+    {
+      "id": "finland",
+      "name": "Finland",
+      "capital": "Helsinki",
+      "lat": 60.1699,
+      "lon": 24.9384,
+      "tags": [
+        "arctic",
+        "baltic_sea",
+        "coastal",
+        "eu",
+        "europe",
+        "majority_christian",
+        "nordic",
+        "schengen"
+      ],
+      "aliases": [
+        "Suomi"
+      ],
+      "status": "sovereign"
+    },
+    {
+      "id": "france",
+      "name": "France",
+      "capital": "Paris",
+      "lat": 48.8566,
+      "lon": 2.3522,
+      "tags": [
+        "alps",
+        "atlantic",
+        "atlantic_mediterranean",
+        "eu",
+        "europe",
+        "majority_christian",
+        "mediterranean",
+        "monarchy_history",
+        "multi_sea",
+        "pyrenees",
+        "schengen"
+      ],
+      "aliases": [],
+      "status": "sovereign"
+    },
+    {
+      "id": "georgia",
+      "name": "Georgia",
+      "capital": "Tbilisi",
+      "lat": 41.7151,
+      "lon": 44.8271,
+      "tags": [
+        "black_sea",
+        "caucasus",
+        "europe",
+        "majority_christian",
+        "non_eu",
+        "orthodox",
+        "transcontinental"
+      ],
+      "aliases": [],
+      "status": "sovereign"
+    },
+    {
+      "id": "germany",
+      "name": "Germany",
+      "capital": "Berlin",
+      "lat": 52.52,
+      "lon": 13.405,
+      "tags": [
+        "eu",
+        "europe",
+        "eurozone",
+        "former_ussr_neighbor",
+        "german_official",
+        "landlocked",
+        "majority_christian",
+        "many_borders",
+        "schengen"
+      ],
+      "aliases": [
+        "Deutschland"
+      ],
+      "status": "sovereign"
+    },
+    {
+      "id": "greece",
+      "name": "Greece",
+      "capital": "Athens",
+      "lat": 37.9838,
+      "lon": 23.7275,
+      "tags": [
+        "balkan",
+        "eu",
+        "europe",
+        "eurozone",
+        "former_ottoman",
+        "island",
+        "majority_christian",
+        "mediterranean",
+        "orthodox",
+        "schengen"
+      ],
+      "aliases": [
+        "Hellas",
+        "Ελλάδα"
+      ],
+      "status": "sovereign"
+    },
+    {
+      "id": "hungary",
+      "name": "Hungary",
+      "capital": "Budapest",
+      "lat": 47.4979,
+      "lon": 19.0402,
+      "tags": [
+        "eu",
+        "europe",
+        "former_austro_hungarian",
+        "landlocked",
+        "majority_christian",
+        "schengen"
+      ],
+      "aliases": [
+        "Magyarország"
+      ],
+      "status": "sovereign"
+    },
+    {
+      "id": "iceland",
+      "name": "Iceland",
+      "capital": "Reykjavik",
+      "lat": 64.1466,
+      "lon": -21.9426,
+      "tags": [
+        "arctic",
+        "atlantic",
+        "europe",
+        "island",
+        "majority_christian",
+        "non_eu",
+        "nordic",
+        "schengen"
+      ],
+      "aliases": [
+        "Ísland"
+      ],
+      "status": "sovereign"
+    },
+    {
+      "id": "ireland",
+      "name": "Ireland",
+      "capital": "Dublin",
+      "lat": 53.3498,
+      "lon": -6.2603,
+      "tags": [
+        "atlantic",
+        "british_isles",
+        "english_official",
+        "eu",
+        "europe",
+        "island",
+        "majority_christian",
+        "schengen"
+      ],
+      "aliases": [
+        "Éire"
+      ],
+      "status": "sovereign"
+    },
+    {
+      "id": "italy",
+      "name": "Italy",
+      "capital": "Rome",
+      "lat": 41.9028,
+      "lon": 12.4964,
+      "tags": [
+        "adriatic",
+        "alps",
+        "eu",
+        "europe",
+        "eurozone",
+        "island",
+        "majority_christian",
+        "mediterranean",
+        "schengen"
+      ],
+      "aliases": [
+        "Italia"
+      ],
+      "status": "sovereign"
+    },
+    {
+      "id": "kazakhstan",
+      "name": "Kazakhstan",
+      "capital": "Astana",
+      "lat": 51.1694,
+      "lon": 71.4491,
+      "tags": [
+        "caspian",
+        "europe",
+        "former_ussr",
+        "majority_muslim",
+        "non_eu",
+        "transcontinental"
+      ],
+      "aliases": [],
+      "status": "sovereign"
+    },
+    {
+      "id": "kosovo",
+      "name": "Kosovo",
+      "capital": "Pristina",
+      "lat": 42.6629,
+      "lon": 21.1655,
+      "tags": [
+        "balkan",
+        "europe",
+        "former_yugoslavia",
+        "majority_muslim",
+        "non_eu"
+      ],
+      "aliases": [],
+      "status": "sovereign"
+    },
+    {
+      "id": "latvia",
+      "name": "Latvia",
+      "capital": "Riga",
+      "lat": 56.9496,
+      "lon": 24.1052,
+      "tags": [
+        "baltic",
+        "baltic_sea",
+        "coastal",
+        "eu",
+        "europe",
+        "eurozone",
+        "former_ussr",
+        "schengen"
+      ],
+      "aliases": [
+        "Latvija"
+      ],
+      "status": "sovereign"
+    },
+    {
+      "id": "liechtenstein",
+      "name": "Liechtenstein",
+      "capital": "Vaduz",
+      "lat": 47.141,
+      "lon": 9.5209,
+      "tags": [
+        "alps",
+        "europe",
+        "german_official",
+        "landlocked",
+        "majority_christian",
+        "microstate",
+        "no_standing_army",
+        "non_eu"
+      ],
+      "aliases": [],
+      "status": "sovereign"
+    },
+    {
+      "id": "lithuania",
+      "name": "Lithuania",
+      "capital": "Vilnius",
+      "lat": 54.6872,
+      "lon": 25.2797,
+      "tags": [
+        "baltic",
+        "baltic_sea",
+        "coastal",
+        "eu",
+        "europe",
+        "eurozone",
+        "former_ussr",
+        "majority_christian",
+        "schengen"
+      ],
+      "aliases": [
+        "Lietuva"
+      ],
+      "status": "sovereign"
+    },
+    {
+      "id": "luxembourg",
+      "name": "Luxembourg",
+      "capital": "Luxembourg",
+      "lat": 49.6116,
+      "lon": 6.1319,
+      "tags": [
+        "benelux",
+        "eu",
+        "europe",
+        "eurozone",
+        "german_official",
+        "landlocked",
+        "majority_christian",
+        "schengen"
+      ],
+      "aliases": [],
+      "status": "sovereign"
+    },
+    {
+      "id": "malta",
+      "name": "Malta",
+      "capital": "Valletta",
+      "lat": 35.8992,
+      "lon": 14.5141,
+      "tags": [
+        "capital_not_largest",
+        "english_official",
+        "eu",
+        "europe",
+        "eurozone",
+        "island",
+        "majority_christian",
+        "mediterranean",
+        "schengen"
+      ],
+      "aliases": [],
+      "status": "sovereign"
+    },
+    {
+      "id": "moldova",
+      "name": "Moldova",
+      "capital": "Chisinau",
+      "lat": 47.0105,
+      "lon": 28.8638,
+      "tags": [
+        "europe",
+        "former_ussr",
+        "landlocked",
+        "majority_christian",
+        "non_eu",
+        "orthodox"
+      ],
+      "aliases": [
+        "Republic of Moldova"
+      ],
+      "status": "sovereign"
+    },
+    {
+      "id": "monaco",
+      "name": "Monaco",
+      "capital": "Monaco",
+      "lat": 43.7384,
+      "lon": 7.4246,
+      "tags": [
+        "capital_not_largest",
+        "coastal",
+        "europe",
+        "majority_christian",
+        "mediterranean",
+        "microstate",
+        "non_eu"
+      ],
+      "aliases": [],
+      "status": "sovereign"
+    },
+    {
+      "id": "montenegro",
+      "name": "Montenegro",
+      "capital": "Podgorica",
+      "lat": 42.4304,
+      "lon": 19.2594,
+      "tags": [
+        "adriatic",
+        "balkan",
+        "europe",
+        "former_yugoslavia",
+        "majority_christian",
+        "mediterranean",
+        "non_eu",
+        "orthodox"
+      ],
+      "aliases": [
+        "Crna Gora"
+      ],
+      "status": "sovereign"
+    },
+    {
+      "id": "netherlands",
+      "name": "Netherlands",
+      "capital": "Amsterdam",
+      "lat": 52.3676,
+      "lon": 4.9041,
+      "tags": [
+        "benelux",
+        "capital_not_largest",
+        "coastal",
+        "eu",
+        "europe",
+        "eurozone",
+        "majority_christian",
+        "many_borders",
+        "monarchy",
+        "schengen"
+      ],
+      "aliases": [
+        "The Netherlands",
+        "Holland",
+        "Nederland"
+      ],
+      "status": "sovereign"
+    },
+    {
+      "id": "north-macedonia",
+      "name": "North Macedonia",
+      "capital": "Skopje",
+      "lat": 41.9981,
+      "lon": 21.4254,
+      "tags": [
+        "balkan",
+        "europe",
+        "former_yugoslavia",
+        "majority_christian",
+        "non_eu",
+        "orthodox"
+      ],
+      "aliases": [
+        "Macedonia"
+      ],
+      "status": "sovereign"
+    },
+    {
+      "id": "norway",
+      "name": "Norway",
+      "capital": "Oslo",
+      "lat": 59.9139,
+      "lon": 10.7522,
+      "tags": [
+        "arctic",
+        "atlantic",
+        "baltic_sea",
+        "coastal",
+        "europe",
+        "majority_christian",
+        "monarchy",
+        "multi_sea",
+        "non_eu",
+        "nordic",
+        "schengen"
+      ],
+      "aliases": [
+        "Norge"
+      ],
+      "status": "sovereign"
+    },
+    {
+      "id": "poland",
+      "name": "Poland",
+      "capital": "Warsaw",
+      "lat": 52.2297,
+      "lon": 21.0122,
+      "tags": [
+        "baltic_sea",
+        "eu",
+        "europe",
+        "former_ussr_neighbor",
+        "majority_christian",
+        "many_borders",
+        "schengen",
+        "slavic"
+      ],
+      "aliases": [
+        "Polska"
+      ],
+      "status": "sovereign"
+    },
+    {
+      "id": "portugal",
+      "name": "Portugal",
+      "capital": "Lisbon",
+      "lat": 38.7223,
+      "lon": -9.1393,
+      "tags": [
+        "atlantic",
+        "coastal",
+        "eu",
+        "europe",
+        "iberian",
+        "majority_christian",
+        "schengen"
+      ],
+      "aliases": [],
+      "status": "sovereign"
+    },
+    {
+      "id": "romania",
+      "name": "Romania",
+      "capital": "Bucharest",
+      "lat": 44.4268,
+      "lon": 26.1025,
+      "tags": [
+        "balkan",
+        "black_sea",
+        "eu",
+        "europe",
+        "majority_christian",
+        "orthodox",
+        "schengen"
+      ],
+      "aliases": [],
+      "status": "sovereign"
+    },
+    {
+      "id": "russia",
+      "name": "Russia",
+      "capital": "Moscow",
+      "lat": 55.7558,
+      "lon": 37.6173,
+      "tags": [
+        "arctic",
+        "baltic_sea",
+        "black_sea",
+        "europe",
+        "former_ussr",
+        "majority_christian",
+        "multi_sea",
+        "non_eu",
+        "orthodox",
+        "slavic",
+        "transcontinental"
+      ],
+      "aliases": [
+        "Russian Federation"
+      ],
+      "status": "sovereign"
+    },
+    {
+      "id": "san-marino",
+      "name": "San Marino",
+      "capital": "San Marino",
+      "lat": 43.9424,
+      "lon": 12.4578,
+      "tags": [
+        "europe",
+        "landlocked",
+        "majority_christian",
+        "microstate",
+        "no_standing_army",
+        "non_eu"
+      ],
+      "aliases": [],
+      "status": "sovereign"
+    },
+    {
+      "id": "serbia",
+      "name": "Serbia",
+      "capital": "Belgrade",
+      "lat": 44.7866,
+      "lon": 20.4489,
+      "tags": [
+        "balkan",
+        "europe",
+        "former_yugoslavia",
+        "landlocked",
+        "majority_christian",
+        "non_eu",
+        "orthodox",
+        "slavic"
+      ],
+      "aliases": [],
+      "status": "sovereign"
+    },
+    {
+      "id": "slovakia",
+      "name": "Slovakia",
+      "capital": "Bratislava",
+      "lat": 48.1486,
+      "lon": 17.1077,
+      "tags": [
+        "eu",
+        "europe",
+        "eurozone",
+        "former_austro_hungarian",
+        "landlocked",
+        "majority_christian",
+        "schengen",
+        "slavic"
+      ],
+      "aliases": [
+        "Slovensko"
+      ],
+      "status": "sovereign"
+    },
+    {
+      "id": "slovenia",
+      "name": "Slovenia",
+      "capital": "Ljubljana",
+      "lat": 46.0569,
+      "lon": 14.5058,
+      "tags": [
+        "adriatic",
+        "alps",
+        "balkan",
+        "eu",
+        "europe",
+        "eurozone",
+        "former_austro_hungarian",
+        "former_yugoslavia",
+        "majority_christian",
+        "mediterranean",
+        "schengen"
+      ],
+      "aliases": [
+        "Slovenija"
+      ],
+      "status": "sovereign"
+    },
+    {
+      "id": "spain",
+      "name": "Spain",
+      "capital": "Madrid",
+      "lat": 40.4168,
+      "lon": -3.7038,
+      "tags": [
+        "atlantic",
+        "atlantic_mediterranean",
+        "eu",
+        "europe",
+        "iberian",
+        "majority_christian",
+        "mediterranean",
+        "monarchy",
+        "pyrenees",
+        "schengen"
+      ],
+      "aliases": [
+        "España"
+      ],
+      "status": "sovereign"
+    },
+    {
+      "id": "sweden",
+      "name": "Sweden",
+      "capital": "Stockholm",
+      "lat": 59.3293,
+      "lon": 18.0686,
+      "tags": [
+        "arctic",
+        "baltic_sea",
+        "coastal",
+        "eu",
+        "europe",
+        "majority_christian",
+        "monarchy",
+        "nordic",
+        "schengen"
+      ],
+      "aliases": [
+        "Sverige"
+      ],
+      "status": "sovereign"
+    },
+    {
+      "id": "switzerland",
+      "name": "Switzerland",
+      "capital": "Bern",
+      "lat": 46.948,
+      "lon": 7.4474,
+      "tags": [
+        "alps",
+        "capital_not_largest",
+        "europe",
+        "german_official",
+        "landlocked",
+        "majority_christian",
+        "non_eu",
+        "schengen"
+      ],
+      "aliases": [
+        "Schweiz",
+        "Suisse",
+        "Svizzera"
+      ],
+      "status": "sovereign"
+    },
+    {
+      "id": "turkey",
+      "name": "Turkey",
+      "capital": "Ankara",
+      "lat": 39.9334,
+      "lon": 32.8597,
+      "tags": [
+        "black_sea",
+        "caspian",
+        "europe",
+        "majority_muslim",
+        "mediterranean",
+        "multi_sea",
+        "non_eu",
+        "transcontinental"
+      ],
+      "aliases": [
+        "Türkiye"
+      ],
+      "status": "sovereign"
+    },
+    {
+      "id": "ukraine",
+      "name": "Ukraine",
+      "capital": "Kyiv",
+      "lat": 50.4501,
+      "lon": 30.5234,
+      "tags": [
+        "black_sea",
+        "europe",
+        "former_ussr",
+        "majority_christian",
+        "non_eu",
+        "orthodox",
+        "slavic"
+      ],
+      "aliases": [
+        "Kiev",
+        "Україна"
+      ],
+      "status": "sovereign"
+    },
+    {
+      "id": "united-kingdom",
+      "name": "United Kingdom",
+      "capital": "London",
+      "lat": 51.5072,
+      "lon": -0.1276,
+      "tags": [
+        "atlantic",
+        "british_isles",
+        "english_official",
+        "europe",
+        "island",
+        "majority_christian",
+        "monarchy",
+        "multi_sea",
+        "non_eu"
+      ],
+      "aliases": [
+        "UK",
+        "Britain",
+        "Great Britain"
+      ],
+      "status": "sovereign"
+    },
+    {
+      "id": "vatican-city",
+      "name": "Vatican City",
+      "capital": "Vatican City",
+      "lat": 41.9029,
+      "lon": 12.4534,
+      "tags": [
+        "europe",
+        "landlocked",
+        "majority_christian",
+        "microstate",
+        "no_standing_army",
+        "non_eu"
+      ],
+      "aliases": [
+        "Holy See",
+        "Vatican"
+      ],
+      "status": "sovereign"
+    },
+    {
+      "id": "greenland",
+      "name": "Greenland",
+      "capital": "Nuuk",
+      "lat": 64.1814,
+      "lon": -51.6941,
+      "tags": [
+        "arctic",
+        "autonomous_territory",
+        "europe",
+        "island",
+        "non_eu",
+        "north_atlantic"
+      ],
+      "aliases": [
+        "Kalaallit Nunaat"
+      ],
+      "status": "dependent"
+    },
+    {
+      "id": "faroe-islands",
+      "name": "Faroe Islands",
+      "capital": "Torshavn",
+      "lat": 61.8926,
+      "lon": -6.9118,
+      "tags": [
+        "autonomous_territory",
+        "europe",
+        "island",
+        "non_eu",
+        "nordic",
+        "north_atlantic"
+      ],
+      "aliases": [
+        "Føroyar"
+      ],
+      "status": "dependent"
+    },
+    {
+      "id": "land-islands",
+      "name": "Åland Islands",
+      "capital": "Mariehamn",
+      "lat": 60.0973,
+      "lon": 19.9348,
+      "tags": [
+        "autonomous_territory",
+        "baltic_sea",
+        "europe",
+        "island",
+        "non_eu",
+        "nordic"
+      ],
+      "aliases": [
+        "Aland Islands",
+        "Åland"
+      ],
+      "status": "dependent"
+    },
+    {
+      "id": "gibraltar",
+      "name": "Gibraltar",
+      "capital": "Gibraltar",
+      "lat": 36.1408,
+      "lon": -5.3536,
+      "tags": [
+        "british_overseas_territory",
+        "coastal",
+        "europe",
+        "mediterranean",
+        "non_eu"
+      ],
+      "aliases": [],
+      "status": "dependent"
+    },
+    {
+      "id": "guernsey",
+      "name": "Guernsey",
+      "capital": "Saint Peter Port",
+      "lat": 49.4554,
+      "lon": -2.5368,
+      "tags": [
+        "british_isles",
+        "channel_islands",
+        "crown_dependency",
+        "europe",
+        "island",
+        "non_eu"
+      ],
+      "aliases": [],
+      "status": "dependent"
+    },
+    {
+      "id": "isle-of-man",
+      "name": "Isle of Man",
+      "capital": "Douglas",
+      "lat": 54.1523,
+      "lon": -4.4861,
+      "tags": [
+        "british_isles",
+        "crown_dependency",
+        "europe",
+        "irish_sea",
+        "island",
+        "non_eu"
+      ],
+      "aliases": [
+        "Mann"
+      ],
+      "status": "dependent"
+    },
+    {
+      "id": "jersey",
+      "name": "Jersey",
+      "capital": "Saint Helier",
+      "lat": 49.1868,
+      "lon": -2.1061,
+      "tags": [
+        "british_isles",
+        "channel_islands",
+        "crown_dependency",
+        "europe",
+        "island",
+        "non_eu"
+      ],
+      "aliases": [],
+      "status": "dependent"
+    }
+  ],
+  "questionTemplates": [
+    {
+      "id": "q001",
+      "category": "Physical geography",
+      "prompt": "Name a European country with an Atlantic coastline.",
+      "tag": "atlantic"
+    },
+    {
+      "id": "q002",
+      "category": "Physical geography",
+      "prompt": "Name a European country with a Mediterranean coastline.",
+      "tag": "mediterranean"
+    },
+    {
+      "id": "q003",
+      "category": "Physical geography",
+      "prompt": "Name a European country with a Black Sea coastline.",
+      "tag": "black_sea"
+    },
+    {
+      "id": "q004",
+      "category": "Physical geography",
+      "prompt": "Name a European country crossed by the Alps.",
+      "tag": "alps"
+    },
+    {
+      "id": "q005",
+      "category": "Physical geography",
+      "prompt": "Name a European island country.",
+      "tag": "island"
+    },
+    {
+      "id": "q006",
+      "category": "Physical geography",
+      "prompt": "Name a landlocked European country.",
+      "tag": "landlocked"
+    },
+    {
+      "id": "q007",
+      "category": "Physical geography",
+      "prompt": "Name a European country on the Baltic Sea.",
+      "tag": "baltic_sea"
+    },
+    {
+      "id": "q008",
+      "category": "Physical geography",
+      "prompt": "Name a European country in the Nordic region.",
+      "tag": "nordic"
+    },
+    {
+      "id": "q009",
+      "category": "Physical geography",
+      "prompt": "Name a European country in the Caucasus region.",
+      "tag": "caucasus"
+    },
+    {
+      "id": "q010",
+      "category": "Physical geography",
+      "prompt": "Name a European country with territory in the Arctic.",
+      "tag": "arctic"
+    },
+    {
+      "id": "q011",
+      "category": "Political geography",
+      "prompt": "Name a European country that is not a member of the European Union.",
+      "tag": "non_eu"
+    },
+    {
+      "id": "q012",
+      "category": "Political geography",
+      "prompt": "Name a European Union member state.",
+      "tag": "eu"
+    },
+    {
+      "id": "q013",
+      "category": "Political geography",
+      "prompt": "Name a European country that uses the euro.",
+      "tag": "eurozone"
+    },
+    {
+      "id": "q014",
+      "category": "Political geography",
+      "prompt": "Name a European country that is part of the Schengen Area.",
+      "tag": "schengen"
+    },
+    {
+      "id": "q015",
+      "category": "Political geography",
+      "prompt": "Name a European microstate.",
+      "tag": "microstate"
+    },
+    {
+      "id": "q016",
+      "category": "Political geography",
+      "prompt": "Name a European country that is a constitutional monarchy.",
+      "tag": "monarchy"
+    },
+    {
+      "id": "q017",
+      "category": "Political geography",
+      "prompt": "Name a European country that is not sovereign but has its own local government.",
+      "tag": "autonomous_territory"
+    },
+    {
+      "id": "q018",
+      "category": "Political geography",
+      "prompt": "Name a European Crown Dependency.",
+      "tag": "crown_dependency"
+    },
+    {
+      "id": "q019",
+      "category": "History",
+      "prompt": "Name a country that was part of the former Yugoslavia.",
+      "tag": "former_yugoslavia"
+    },
+    {
+      "id": "q020",
+      "category": "History",
+      "prompt": "Name a country that was part of the former Soviet Union.",
+      "tag": "former_ussr"
+    },
+    {
+      "id": "q021",
+      "category": "History",
+      "prompt": "Name a country that was part of the Austro-Hungarian Empire.",
+      "tag": "former_austro_hungarian"
+    },
+    {
+      "id": "q022",
+      "category": "History",
+      "prompt": "Name a European country once ruled by the Ottoman Empire.",
+      "tag": "former_ottoman"
+    },
+    {
+      "id": "q023",
+      "category": "Culture & language",
+      "prompt": "Name a European country where German is an official language.",
+      "tag": "german_official"
+    },
+    {
+      "id": "q024",
+      "category": "Culture & language",
+      "prompt": "Name a European country where English is an official language.",
+      "tag": "english_official"
+    },
+    {
+      "id": "q025",
+      "category": "Culture & society",
+      "prompt": "Name a European country with a Christian-majority population.",
+      "tag": "majority_christian"
+    },
+    {
+      "id": "q026",
+      "category": "Culture & society",
+      "prompt": "Name a European country with a Muslim-majority population.",
+      "tag": "majority_muslim"
+    },
+    {
+      "id": "q027",
+      "category": "Culture & society",
+      "prompt": "Name a European country where Eastern Orthodoxy is the largest religious tradition.",
+      "tag": "orthodox"
+    },
+    {
+      "id": "q028",
+      "category": "Culture & society",
+      "prompt": "Name a European country with a Nordic cultural identity.",
+      "tag": "nordic"
+    },
+    {
+      "id": "q029",
+      "category": "Unexpected Europe",
+      "prompt": "Name a European country whose capital is not its largest city.",
+      "tag": "capital_not_largest"
+    },
+    {
+      "id": "q030",
+      "category": "Unexpected Europe",
+      "prompt": "Name a European territory that is geographically closer to North America than mainland Europe.",
+      "tag": "north_atlantic"
+    },
+    {
+      "id": "q031",
+      "category": "Unexpected Europe",
+      "prompt": "Name a European country with coastline on more than one sea.",
+      "tag": "multi_sea"
+    },
+    {
+      "id": "q032",
+      "category": "Unexpected Europe",
+      "prompt": "Name a European country that shares a land border with at least five countries.",
+      "tag": "many_borders"
+    },
+    {
+      "id": "q033",
+      "category": "Unexpected Europe",
+      "prompt": "Name a European country with both Atlantic and Mediterranean coasts.",
+      "tag": "atlantic_mediterranean"
+    },
+    {
+      "id": "q034",
+      "category": "Unexpected Europe",
+      "prompt": "Name a European country that is transcontinental.",
+      "tag": "transcontinental"
+    },
+    {
+      "id": "q035",
+      "category": "Unexpected Europe",
+      "prompt": "Name a European country that has no standing army.",
+      "tag": "no_standing_army"
+    },
+    {
+      "id": "q036",
+      "category": "Unexpected Europe",
+      "prompt": "Name a European territory that is not part of the European Union.",
+      "tag": "non_eu"
+    },
+    {
+      "id": "q037",
+      "category": "Regional identities",
+      "prompt": "Name a country in the Balkans.",
+      "tag": "balkan"
+    },
+    {
+      "id": "q038",
+      "category": "Regional identities",
+      "prompt": "Name a country in the Benelux region.",
+      "tag": "benelux"
+    },
+    {
+      "id": "q039",
+      "category": "Regional identities",
+      "prompt": "Name a country in the Baltic region.",
+      "tag": "baltic"
+    },
+    {
+      "id": "q040",
+      "category": "Regional identities",
+      "prompt": "Name a country in the Iberian Peninsula.",
+      "tag": "iberian"
+    },
+    {
+      "id": "q041",
+      "category": "Regional identities",
+      "prompt": "Name a country in the British Isles.",
+      "tag": "british_isles"
+    },
+    {
+      "id": "q042",
+      "category": "Regional identities",
+      "prompt": "Name a country in the Adriatic region.",
+      "tag": "adriatic"
+    },
+    {
+      "id": "q043",
+      "category": "Regional identities",
+      "prompt": "Name a country in the Pyrenees.",
+      "tag": "pyrenees"
+    },
+    {
+      "id": "q044",
+      "category": "Regional identities",
+      "prompt": "Name a European country bordering the Caspian Sea.",
+      "tag": "caspian"
+    },
+    {
+      "id": "q045",
+      "category": "Islands & seas",
+      "prompt": "Name an EU member that is also a Mediterranean island country.",
+      "tags": [
+        "eu",
+        "island",
+        "mediterranean"
+      ]
+    },
+    {
+      "id": "q046",
+      "category": "Islands & seas",
+      "prompt": "Name a non-EU island country in the North Atlantic.",
+      "tags": [
+        "non_eu",
+        "island",
+        "atlantic"
+      ]
+    },
+    {
+      "id": "q047",
+      "category": "Islands & seas",
+      "prompt": "Name a European island country outside the European Union.",
+      "tags": [
+        "non_eu",
+        "island"
+      ]
+    },
+    {
+      "id": "q048",
+      "category": "Islands & seas",
+      "prompt": "Name an island country in the Nordic region.",
+      "tags": [
+        "island",
+        "nordic"
+      ]
+    },
+    {
+      "id": "q049",
+      "category": "Islands & seas",
+      "prompt": "Name a European island country with a Mediterranean coastline.",
+      "tags": [
+        "island",
+        "mediterranean"
+      ]
+    },
+    {
+      "id": "q050",
+      "category": "Islands & seas",
+      "prompt": "Name a European country with both island and mainland territory.",
+      "tags": [
+        "island",
+        "mediterranean"
+      ]
+    },
+    {
+      "id": "q051",
+      "category": "European Union",
+      "prompt": "Name a landlocked member of the European Union.",
+      "tags": [
+        "eu",
+        "landlocked"
+      ]
+    },
+    {
+      "id": "q052",
+      "category": "European Union",
+      "prompt": "Name a Nordic country that belongs to the European Union.",
+      "tags": [
+        "nordic",
+        "eu"
+      ]
+    },
+    {
+      "id": "q053",
+      "category": "European Union",
+      "prompt": "Name a Balkan country that belongs to the European Union.",
+      "tags": [
+        "balkan",
+        "eu"
+      ]
+    },
+    {
+      "id": "q054",
+      "category": "European Union",
+      "prompt": "Name a Baltic country that belongs to the European Union.",
+      "tags": [
+        "baltic",
+        "eu"
+      ]
+    },
+    {
+      "id": "q055",
+      "category": "European Union",
+      "prompt": "Name a European Union member in the Benelux region.",
+      "tags": [
+        "benelux",
+        "eu"
+      ]
+    },
+    {
+      "id": "q056",
+      "category": "European Union",
+      "prompt": "Name an EU member in the Alps.",
+      "tags": [
+        "alps",
+        "eu"
+      ]
+    },
+    {
+      "id": "q057",
+      "category": "European Union",
+      "prompt": "Name an EU member with a Mediterranean coastline.",
+      "tags": [
+        "eu",
+        "mediterranean"
+      ]
+    },
+    {
+      "id": "q058",
+      "category": "European Union",
+      "prompt": "Name an EU member with an Atlantic coastline.",
+      "tags": [
+        "eu",
+        "atlantic"
+      ]
+    },
+    {
+      "id": "q059",
+      "category": "Outside the EU",
+      "prompt": "Name a landlocked European country outside the EU.",
+      "tags": [
+        "non_eu",
+        "landlocked"
+      ]
+    },
+    {
+      "id": "q060",
+      "category": "Outside the EU",
+      "prompt": "Name a non-EU country in the Nordic region.",
+      "tags": [
+        "non_eu",
+        "nordic"
+      ]
+    },
+    {
+      "id": "q061",
+      "category": "Outside the EU",
+      "prompt": "Name a non-EU country in the Balkans.",
+      "tags": [
+        "non_eu",
+        "balkan"
+      ]
+    },
+    {
+      "id": "q062",
+      "category": "Outside the EU",
+      "prompt": "Name a non-EU country in the Caucasus.",
+      "tags": [
+        "non_eu",
+        "caucasus"
+      ]
+    },
+    {
+      "id": "q063",
+      "category": "Outside the EU",
+      "prompt": "Name a non-EU country in the Alps.",
+      "tags": [
+        "non_eu",
+        "alps"
+      ]
+    },
+    {
+      "id": "q064",
+      "category": "Outside the EU",
+      "prompt": "Name a non-EU country with a Mediterranean coastline.",
+      "tags": [
+        "non_eu",
+        "mediterranean"
+      ]
+    },
+    {
+      "id": "q065",
+      "category": "Outside the EU",
+      "prompt": "Name a non-EU country that is part of the Schengen Area.",
+      "tags": [
+        "non_eu",
+        "schengen"
+      ]
+    },
+    {
+      "id": "q066",
+      "category": "History & borders",
+      "prompt": "Name a former Yugoslav republic that is now in the EU.",
+      "tags": [
+        "former_yugoslavia",
+        "eu"
+      ]
+    },
+    {
+      "id": "q067",
+      "category": "History & borders",
+      "prompt": "Name a former Yugoslav republic that is outside the EU.",
+      "tags": [
+        "former_yugoslavia",
+        "non_eu"
+      ]
+    },
+    {
+      "id": "q068",
+      "category": "History & borders",
+      "prompt": "Name a country from the former Austro-Hungarian Empire that is now in the EU.",
+      "tags": [
+        "former_austro_hungarian",
+        "eu"
+      ]
+    },
+    {
+      "id": "q069",
+      "category": "History & borders",
+      "prompt": "Name a country from the former Soviet Union that is now in the EU.",
+      "tags": [
+        "former_ussr",
+        "eu"
+      ]
+    },
+    {
+      "id": "q070",
+      "category": "History & borders",
+      "prompt": "Name a former Soviet republic outside the EU.",
+      "tags": [
+        "former_ussr",
+        "non_eu"
+      ]
+    },
+    {
+      "id": "q071",
+      "category": "History & borders",
+      "prompt": "Name a former Yugoslav country with an Adriatic coastline.",
+      "tags": [
+        "former_yugoslavia",
+        "adriatic"
+      ]
+    },
+    {
+      "id": "q072",
+      "category": "History & borders",
+      "prompt": "Name a country shaped by both Slavic and Orthodox traditions.",
+      "tags": [
+        "slavic",
+        "orthodox"
+      ]
+    },
+    {
+      "id": "q073",
+      "category": "Religion & society",
+      "prompt": "Name an EU country with an Orthodox Christian majority.",
+      "tags": [
+        "eu",
+        "orthodox"
+      ]
+    },
+    {
+      "id": "q074",
+      "category": "Religion & society",
+      "prompt": "Name a non-EU country with an Orthodox Christian majority.",
+      "tags": [
+        "non_eu",
+        "orthodox"
+      ]
+    },
+    {
+      "id": "q075",
+      "category": "Religion & society",
+      "prompt": "Name a non-EU European country with a Christian majority.",
+      "tags": [
+        "non_eu",
+        "majority_christian"
+      ]
+    },
+    {
+      "id": "q076",
+      "category": "Religion & society",
+      "prompt": "Name an EU country with a Christian-majority population.",
+      "tags": [
+        "eu",
+        "majority_christian"
+      ]
+    },
+    {
+      "id": "q077",
+      "category": "Religion & society",
+      "prompt": "Name a microstate with a Christian-majority population.",
+      "tags": [
+        "microstate",
+        "majority_christian"
+      ]
+    },
+    {
+      "id": "q078",
+      "category": "Religion & society",
+      "prompt": "Name a country in the Caucasus with a Christian-majority population.",
+      "tags": [
+        "caucasus",
+        "majority_christian"
+      ]
+    },
+    {
+      "id": "q079",
+      "category": "Languages & culture",
+      "prompt": "Name a landlocked country where German is an official language.",
+      "tags": [
+        "german_official",
+        "landlocked"
+      ]
+    },
+    {
+      "id": "q080",
+      "category": "Languages & culture",
+      "prompt": "Name an island country where English is an official language.",
+      "tags": [
+        "english_official",
+        "island"
+      ]
+    },
+    {
+      "id": "q081",
+      "category": "Languages & culture",
+      "prompt": "Name a Nordic country with a monarchy.",
+      "tags": [
+        "nordic",
+        "monarchy"
+      ]
+    },
+    {
+      "id": "q082",
+      "category": "Languages & culture",
+      "prompt": "Name an EU member with a monarchy.",
+      "tags": [
+        "eu",
+        "monarchy"
+      ]
+    },
+    {
+      "id": "q083",
+      "category": "Languages & culture",
+      "prompt": "Name a non-EU European country with a monarchy.",
+      "tags": [
+        "non_eu",
+        "monarchy"
+      ]
+    },
+    {
+      "id": "q084",
+      "category": "Territories & autonomy",
+      "prompt": "Name a European Crown Dependency in the Channel Islands or Irish Sea.",
+      "tags": [
+        "crown_dependency",
+        "island"
+      ]
+    },
+    {
+      "id": "q085",
+      "category": "Territories & autonomy",
+      "prompt": "Name an autonomous European territory outside the EU.",
+      "tags": [
+        "autonomous_territory",
+        "non_eu"
+      ]
+    },
+    {
+      "id": "q086",
+      "category": "Territories & autonomy",
+      "prompt": "Name a North Atlantic territory with an island geography.",
+      "tags": [
+        "north_atlantic",
+        "island"
+      ]
+    },
+    {
+      "id": "q087",
+      "category": "Territories & autonomy",
+      "prompt": "Name a European autonomous territory in Northern Europe.",
+      "tags": [
+        "autonomous_territory",
+        "nordic"
+      ]
+    },
+    {
+      "id": "q088",
+      "category": "Territories & autonomy",
+      "prompt": "Name a European territory that is not a sovereign state.",
+      "tags": [
+        "autonomous_territory"
+      ]
+    },
+    {
+      "id": "q089",
+      "category": "Microstates & mountains",
+      "prompt": "Name a landlocked European microstate.",
+      "tags": [
+        "microstate",
+        "landlocked"
+      ]
+    },
+    {
+      "id": "q090",
+      "category": "Microstates & mountains",
+      "prompt": "Name a small European state in the Alps or Pyrenees.",
+      "tags": [
+        "microstate",
+        "landlocked"
+      ]
+    },
+    {
+      "id": "q091",
+      "category": "Microstates & mountains",
+      "prompt": "Name a European microstate in or near the Mediterranean.",
+      "tags": [
+        "microstate",
+        "majority_christian"
+      ]
+    },
+    {
+      "id": "q092",
+      "category": "Microstates & mountains",
+      "prompt": "Name a non-EU microstate.",
+      "tags": [
+        "microstate",
+        "non_eu"
+      ]
+    },
+    {
+      "id": "q093",
+      "category": "Regional identities",
+      "prompt": "Name a country in the Balkans with an Adriatic coastline.",
+      "tags": [
+        "balkan",
+        "adriatic"
+      ]
+    },
+    {
+      "id": "q094",
+      "category": "Regional identities",
+      "prompt": "Name a Baltic country that was once part of the Soviet Union.",
+      "tags": [
+        "baltic",
+        "former_ussr"
+      ]
+    },
+    {
+      "id": "q095",
+      "category": "Regional identities",
+      "prompt": "Name a Nordic island country outside the EU.",
+      "tags": [
+        "nordic",
+        "island",
+        "non_eu"
+      ]
+    },
+    {
+      "id": "q096",
+      "category": "Regional identities",
+      "prompt": "Name a country in the Iberian Peninsula with an Atlantic coastline.",
+      "tags": [
+        "iberian",
+        "atlantic"
+      ]
+    },
+    {
+      "id": "q097",
+      "category": "Regional identities",
+      "prompt": "Name an island country in the British Isles.",
+      "tags": [
+        "british_isles",
+        "island"
+      ]
+    },
+    {
+      "id": "q098",
+      "category": "Regional identities",
+      "prompt": "Name a country in the British Isles outside the EU.",
+      "tags": [
+        "british_isles",
+        "non_eu"
+      ]
+    },
+    {
+      "id": "q099",
+      "category": "Regional identities",
+      "prompt": "Name a country in the Benelux region with German as an official language.",
+      "tags": [
+        "benelux",
+        "german_official"
+      ]
+    },
+    {
+      "id": "q100",
+      "category": "Regional identities",
+      "prompt": "Name an Alpine country that is outside the EU.",
+      "tags": [
+        "alps",
+        "non_eu"
+      ]
+    },
+    {
+      "id": "q101",
+      "category": "Regional identities",
+      "prompt": "Name a transcontinental country with a Black Sea coastline.",
+      "tags": [
+        "transcontinental",
+        "black_sea"
+      ]
+    },
+    {
+      "id": "q102",
+      "category": "Regional identities",
+      "prompt": "Name a transcontinental country with a Caspian coastline.",
+      "tags": [
+        "transcontinental",
+        "caspian"
+      ]
+    },
+    {
+      "id": "q103",
+      "category": "Regional identities",
+      "prompt": "Name a European country with a Black Sea coastline.",
+      "tags": [
+        "black_sea"
+      ]
+    },
+    {
+      "id": "q104",
+      "category": "Regional identities",
+      "prompt": "Name a country with Baltic Sea access and a Nordic identity.",
+      "tags": [
+        "baltic_sea",
+        "nordic"
+      ]
+    }
+  ],
+  "dataNotes": {
+    "distanceMethod": "Haversine great-circle distance between capital coordinates; rounded to nearest kilometre.",
+    "reviewStatus": "Prototype data; verify nuanced political, demographic, and cultural classifications before production.",
+    "territoryPolicy": "Includes all explicitly requested dependent/autonomous territories. Kosovo is treated as sovereign for gameplay.",
+    "questionMethod": "Question templates are tag-based. The game filters out visited/current destinations and selects a varied sequence deterministically per date."
+  },
+  "questionCount": 104
+}
