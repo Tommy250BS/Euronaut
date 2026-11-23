@@ -1,421 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CHRONONAUT — Temporal Rarity Expedition</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="tailwind.config.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,600&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=20261122.4" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EURONAUT — Seven Journeys Across Europe</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="tailwind.config.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:wght@600;700;800&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+:root{--era-accent:#B85A2A}
+body{background:#F3EBDD;color:#1C1B18}
+.instrument-card{background:#F8F3E8;border:2px solid #1C1B18;box-shadow:4px 4px 0 #1C1B18}
+.tactile-btn{border:2px solid #1C1B18;box-shadow:3px 3px 0 #1C1B18;transition:transform .12s,box-shadow .12s}
+.tactile-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 #1C1B18}
+.mono{font-family:'IBM Plex Mono',monospace}.serif{font-family:'Fraunces',serif}
+#scene-canvas{width:100%;height:100%;display:block;image-rendering:pixelated}
+.progress-step{height:9px;border:1.5px solid #1C1B18;border-radius:3px;background:#DED5C3}
+.progress-step.done{background:#4F8878}.progress-step.missed{background:#B85A2A}
+.badge-pill{border:1.5px solid #1C1B18;border-radius:999px;padding:4px 10px;font:700 11px 'IBM Plex Mono',monospace;letter-spacing:.04em}
+.stamp{border:2px solid #1C1B18;box-shadow:2px 2px 0 #1C1B18;background:#F8F3E8}
+.hidden{display:none!important}
+</style>
 </head>
-<body class="min-h-screen flex flex-col justify-between selection:bg-brass/30 selection:text-ink">
-
-  <!-- TOP MASTHEAD (Swiss Horology / Editorial Dispatch Header) -->
-  <header class="w-full max-w-4xl mx-auto px-4 pt-4 pb-2 flex flex-wrap items-center justify-between gap-3">
-    <div class="flex items-center gap-3">
-      <!-- Brass Pocket Chronometer Emblem -->
-      <div class="w-10 h-10 rounded-full bg-brass border-2 border-ink flex items-center justify-center shadow-[2px_2px_0px_#1C1B18] shrink-0">
-        <svg class="w-5 h-5 text-paper" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="13" r="8" />
-          <path d="M12 9v4l2.5 2.5" />
-          <path d="M9.5 2h5" />
-          <path d="M12 2v3" />
-        </svg>
-      </div>
-      <div>
-        <div class="flex items-center gap-2">
-          <h1 class="font-serif font-extrabold text-xl sm:text-2xl tracking-tight text-ink leading-none">CHRONONAUT</h1>
-          <span id="mode-badge" class="text-[11px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-paperDark text-ink border border-ink">
-            EXPEDITION #01
-          </span>
-        </div>
-        <p class="text-xs text-inkMuted mt-0.5 hidden sm:block">1 Point = +1 Year of Chronal Fuel • Propel your capsule into the future</p>
-      </div>
+<body class="min-h-screen flex flex-col">
+<header class="w-full max-w-4xl mx-auto px-4 pt-4 pb-2 flex flex-wrap items-center justify-between gap-3">
+  <div class="flex items-center gap-3">
+    <div class="w-11 h-11 rounded-full bg-brass border-2 border-ink flex items-center justify-center shadow-[2px_2px_0px_#1C1B18]">
+      <svg class="w-6 h-6 text-paper" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 16h18l-2-6H8l-5 6Z"/><path d="M8 10l3-5h4l3 5M6 16v3m12-3v3M9 19h6"/></svg>
     </div>
-
-    <div class="flex items-center gap-2">
-      <button id="switch-seed-top-btn" type="button" class="tactile-btn px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-paperDark hover:bg-[#E2D9C3] text-ink cursor-pointer">
-        Switch to Practice
-      </button>
-      <button id="how-to-btn" type="button" class="tactile-btn px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-paper hover:bg-paperDark text-ink cursor-pointer">
-        Manual ?
-      </button>
-    </div>
-  </header>
-
-  <!-- MAIN INSTRUMENT CONSOLE -->
-  <main class="w-full max-w-4xl mx-auto px-4 py-2 flex-1 flex flex-col justify-center gap-4">
-
-    <!-- CHRONOSPHERE RAIL & FUEL CONVERSION TELEMETRY DECK -->
-    <section aria-label="Chronosphere Propulsion Telemetry" class="instrument-card rounded-2xl p-3.5 sm:p-4 relative">
-      <!-- Top Telemetry Row: Fuel Tank Sight-Glass + Conversion Equation + Year Odometer -->
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-3 items-center mb-3">
-
-        <!-- Left (7 cols): Mechanical Chronal Fuel Tank & Conversion Readout -->
-        <div class="md:col-span-7 bg-paper border-[1.5px] border-ink rounded-xl p-2.5 flex flex-col justify-between gap-1.5">
-          <div class="flex items-center justify-between gap-2">
-            <div class="flex items-center gap-1.5">
-              <span class="inline-block w-2.5 h-2.5 rounded-full bg-brass border border-ink"></span>
-              <span class="text-[11px] font-mono font-bold uppercase tracking-wider text-ink">Chronal Fuel Tank</span>
-            </div>
-            <span id="fuel-conversion-readout" class="text-[11px] font-mono font-bold px-2 py-0.5 rounded bg-paperDark border border-ink/40 text-ink">
-              1 PT = +1 YR FUEL
-            </span>
-          </div>
-
-          <!-- Brass & Glass Sight Tube -->
-          <div class="flex items-center gap-2.5">
-            <div class="sight-glass h-5 flex-1 rounded-md">
-              <div id="fuel-tank-bar" class="sight-liquid h-full w-0"></div>
-              <!-- Engraved tick marks across glass -->
-              <div class="absolute inset-0 flex justify-between px-3 pointer-events-none">
-                <span class="w-px h-2 bg-ink/40 self-end"></span>
-                <span class="w-px h-3 bg-ink/50 self-end"></span>
-                <span class="w-px h-2 bg-ink/40 self-end"></span>
-                <span class="w-px h-3 bg-ink/50 self-end"></span>
-                <span class="w-px h-2 bg-ink/40 self-end"></span>
-              </div>
-            </div>
-            <div class="font-mono font-bold text-xs sm:text-sm text-ink whitespace-nowrap min-w-[92px] text-right">
-              <span id="total-fuel-display">0 / —</span> YRS
-            </div>
-          </div>
-        </div>
-
-        <!-- Right (5 cols): Destination Year Odometer -->
-        <div class="md:col-span-5 bg-paper border-[1.5px] border-ink rounded-xl p-2.5 flex items-center justify-between gap-3">
-          <div>
-            <span class="text-[10px] font-mono font-bold uppercase tracking-wider text-inkMuted block">Origin: 2026 AD</span>
-            <span class="font-serif font-bold text-sm sm:text-base text-ink">Destination Year</span>
-          </div>
-          <div class="odometer-drum px-3.5 py-1.5 rounded-lg text-right">
-            <span id="year-counter-display" class="font-mono font-bold text-lg sm:text-2xl tracking-wider text-[#F6E7C1]">
-              2026 AD
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bespoke Illustrated Meridian Rail & Chronosphere Capsule Canvas -->
-      <div class="w-full h-28 sm:h-32 rounded-xl border-2 border-ink bg-[#EFE9DA] relative overflow-hidden">
-        <canvas id="chronosphere-canvas" class="w-full h-full block"></canvas>
-      </div>
-
-      <!-- 7-Jump Station Progress Strip -->
-      <div id="jump-progress-bar" class="grid grid-cols-7 gap-1 sm:gap-2 mt-3">
-        <!-- Populated dynamically -->
-      </div>
-    </section>
-
-    <!-- ====================================================================== -->
-    <!-- SCREEN 1: EXPEDITION BRIEFING & FUEL MECHANIC EXPLANATION              -->
-    <!-- ====================================================================== -->
-    <section id="start-screen" class="instrument-card rounded-2xl p-5 sm:p-8 animate-stamp-in">
-      <div class="flex flex-wrap items-center justify-between gap-2 pb-4 mb-5 border-b-2 border-ink/15">
-        <span class="era-badge-dynamic px-3 py-1 rounded-md font-mono text-xs font-bold uppercase tracking-wider">
-          7 Temporal Jumps • Daily Rarity Expedition
-        </span>
-        <span class="font-mono text-xs font-semibold text-inkMuted">
-          BASE LAUNCH: 2026 AD → DESTINATION: VARIABLE
-        </span>
-      </div>
-
-      <h2 class="font-serif text-2xl sm:text-4xl font-extrabold text-ink tracking-tight leading-tight mb-3">
-        Answer with obscure knowledge to fuel your time machine into the future.
-      </h2>
-      <p class="text-inkMuted text-sm sm:text-base leading-relaxed mb-6">
-        Your Chronosphere capsule is stationed in <strong class="text-ink">2026 AD</strong> with an empty tank. Across <strong class="text-ink">7 jumps</strong> drawn from 20 domains including history, art, music, games, geography, science, literature, and exploration, every valid answer distills into <strong class="text-ink underline decoration-brass decoration-2 underline-offset-2">Chronal Fuel</strong>:
-      </p>
-
-      <!-- Clear Visual Formula Banner: Points = Fuel = Future Years -->
-      <div class="bg-paper border-2 border-ink rounded-xl p-4 mb-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-lg bg-brass/20 border-[1.5px] border-ink flex items-center justify-center font-mono font-extrabold text-base text-ink shrink-0">
-            1:1
-          </div>
-          <div>
-            <div class="font-mono font-bold text-xs sm:text-sm uppercase text-ink">
-              1 Rarity Point = +1 Year of Chronal Fuel
-            </div>
-            <p class="text-xs text-inkMuted mt-0.5">
-              Obvious answers yield low fuel (15–30 yrs). Deep cuts burn up to <strong>+100 yrs</strong> in a single jump!
-            </p>
-          </div>
-        </div>
-        <div class="font-mono text-xs font-bold bg-ink text-paper px-3 py-2 rounded-lg whitespace-nowrap">
-          2026 AD + FUEL = TARGET YEAR
-        </div>
-      </div>
-
-      <!-- Rarity Fuel Grade Cards -->
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 mb-7">
-        <div class="instrument-card-sm p-3 rounded-xl">
-          <div class="flex items-center justify-between mb-1">
-            <span class="font-mono text-xs font-bold uppercase text-ink">Common</span>
-            <span class="font-mono text-xs font-bold px-1.5 py-0.5 rounded bg-[#E6DEC8] border border-ink/30 text-ink">+15–30y</span>
-          </div>
-          <p class="text-[11px] text-inkMuted leading-snug">Household names everyone guesses first. Low fuel burn.</p>
-        </div>
-
-        <div class="instrument-card-sm p-3 rounded-xl">
-          <div class="flex items-center justify-between mb-1">
-            <span class="font-mono text-xs font-bold uppercase text-verdigris">Uncommon</span>
-            <span class="font-mono text-xs font-bold px-1.5 py-0.5 rounded bg-verdigris/15 border border-verdigris/40 text-verdigris">+32–55y</span>
-          </div>
-          <p class="text-[11px] text-inkMuted leading-snug">Solid recall beyond the obvious choices. Steady cruise.</p>
-        </div>
-
-        <div class="instrument-card-sm p-3 rounded-xl">
-          <div class="flex items-center justify-between mb-1">
-            <span class="font-mono text-xs font-bold uppercase text-prussian">Rare</span>
-            <span class="font-mono text-xs font-bold px-1.5 py-0.5 rounded bg-prussian/15 border border-prussian/40 text-prussian">+58–84y</span>
-          </div>
-          <p class="text-[11px] text-inkMuted leading-snug">Specialist cuts that surge your brass boiler forward.</p>
-        </div>
-
-        <div class="instrument-card-sm p-3 rounded-xl">
-          <div class="flex items-center justify-between mb-1">
-            <span class="font-mono text-xs font-bold uppercase text-plum">Paradox</span>
-            <span class="font-mono text-xs font-bold px-1.5 py-0.5 rounded bg-plum/15 border border-plum/40 text-plum">+85–100y</span>
-          </div>
-          <p class="text-[11px] text-inkMuted leading-snug">Archival obscurity. Maximum century-leaping thrust.</p>
-        </div>
-      </div>
-
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
-        <span class="text-xs font-mono text-inkMuted">25s escapement clock per jump • Typos &amp; aliases accepted</span>
-        <button id="start-game-btn" type="button" class="tactile-btn w-full sm:w-auto px-8 py-3.5 rounded-xl bg-brass hover:bg-[#D68930] text-ink font-serif font-extrabold text-base sm:text-lg cursor-pointer">
-          Ignite Boiler — Jump 1 →
-        </button>
-      </div>
-    </section>
-
-    <!-- ====================================================================== -->
-    <!-- SCREEN 2: ACTIVE GAMEPLAY ROUND                                        -->
-    <!-- ====================================================================== -->
-    <section id="game-screen" class="hidden instrument-card rounded-2xl p-5 sm:p-7">
-      <!-- Top Metadata Strip: Jump #, Era Stamp, Chrono-Freeze Switch, Escapement Clock -->
-      <div class="flex flex-wrap items-center justify-between gap-2.5 pb-4 mb-4 border-b-2 border-ink/15">
-        <div class="flex flex-wrap items-center gap-2">
-          <span id="round-number-badge" class="px-2.5 py-1 rounded-md bg-ink text-paper font-mono text-xs font-bold">
-            JUMP 1 / 7
-          </span>
-          <span id="era-tag" class="era-badge-dynamic px-3 py-1 rounded-md font-mono text-xs font-bold uppercase tracking-wider">
-            ANCIENT HISTORY • &lt; 500 AD
-          </span>
-        </div>
-
-        <div class="flex items-center gap-2">
-          <!-- 1-Use Brass Chrono-Freeze Switch -->
-          <button id="chrono-freeze-btn" type="button" title="Pause escapement timer for 10s (costs 15 yrs fuel)" class="tactile-btn flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-paper hover:bg-paperDark text-ink text-xs font-mono font-bold cursor-pointer">
-            <svg class="w-3.5 h-3.5 text-prussian" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
-              <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"/>
-            </svg>
-            <span id="freeze-btn-label">Freeze Clock (-15y)</span>
-          </button>
-
-          <!-- Mechanical Escapement Countdown -->
-          <div id="timer-box" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-paper border-2 border-ink font-mono font-bold text-sm text-ink min-w-[78px] justify-center">
-            <span id="timer-icon" class="w-2 h-2 rounded-full bg-verdigris"></span>
-            <span id="timer-display">25.0s</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Editorial Serif Prompt -->
-      <div class="mb-5">
-        <h2 id="prompt-text" class="font-serif text-xl sm:text-2xl md:text-3xl font-extrabold text-ink leading-snug">
-          Name an ancient civilization or empire that fell before 500 AD
-        </h2>
-        <p id="prompt-hint" class="text-xs sm:text-sm text-inkMuted mt-1.5">
-          Obscure kingdoms distill up to +100 yrs of Chronal Fuel.
-        </p>
-      </div>
-
-      <!-- INPUT PHASE -->
-      <div id="input-phase" class="space-y-3">
-        <form id="guess-form" class="flex flex-col sm:flex-row gap-2.5" autocomplete="off">
-          <div class="relative flex-1">
-            <input
-              id="guess-input"
-              type="text"
-              placeholder="Type a valid answer to distill fuel..."
-              class="w-full px-4 py-3.5 rounded-xl bg-white border-2 border-ink focus:outline-none focus:ring-2 focus:ring-brass text-ink placeholder-inkMuted/60 font-sans font-medium text-base"
-              spellcheck="false"
-            />
-            <span id="input-feedback-msg" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-xs font-mono font-bold text-paper bg-vermilion px-2.5 py-1 rounded border border-ink">
-              Not in archive — try again!
-            </span>
-          </div>
-          <button type="submit" class="tactile-btn px-6 py-3.5 rounded-xl bg-brass hover:bg-[#D68930] text-ink font-serif font-extrabold text-base cursor-pointer shrink-0">
-            Distill Fuel →
-          </button>
-        </form>
-
-        <div class="flex items-center justify-between text-xs font-mono text-inkMuted pt-1">
-          <span id="attempts-counter">Attempts: 0 • Minor typos accepted</span>
-          <button id="skip-round-btn" type="button" class="text-inkMuted hover:text-vermilion underline underline-offset-4 cursor-pointer font-semibold">
-            Coast Empty (0 yrs fuel)
-          </button>
-        </div>
-      </div>
-
-      <!-- FEEDBACK PHASE (Shows Fuel Distilled -> Years Burned) -->
-      <div id="result-phase" class="hidden animate-stamp-in">
-        <div class="rounded-xl bg-paper border-2 border-ink p-4 sm:p-5 mb-4">
-          <div class="flex flex-wrap items-start justify-between gap-3 pb-3 mb-3 border-b border-ink/15">
-            <div>
-              <div class="flex items-center gap-2 mb-1">
-                <span id="result-tier-badge" class="px-2.5 py-0.5 rounded text-xs font-mono font-bold uppercase tracking-wider border border-ink bg-prussian text-paper">
-                  RARE GRADE
-                </span>
-                <span id="result-year-tag" class="text-xs font-mono font-semibold text-inkMuted">
-                  146 BC
-                </span>
-              </div>
-              <h3 id="result-answer-title" class="font-serif text-xl sm:text-2xl font-extrabold text-ink">
-                Carthaginian Empire
-              </h3>
-            </div>
-
-            <!-- Explicit Fuel Conversion Stamp -->
-            <div class="bg-[#FAF7F0] px-3.5 py-2 rounded-xl border-2 border-ink shadow-[2px_2px_0px_#1C1B18] text-right">
-              <span class="text-[10px] font-mono font-bold uppercase text-inkMuted block">Fuel Burned</span>
-              <span id="result-points-gained" class="font-mono font-extrabold text-base sm:text-lg text-verdigris">
-                +50 PTS → +50 YRS
-              </span>
-              <span id="result-year-shift" class="text-[11px] font-mono font-semibold text-ink block">
-                2026 AD → 2076 AD
-              </span>
-            </div>
-          </div>
-
-          <p id="result-fact-text" class="text-sm text-ink leading-relaxed mb-3">
-            Fell to Rome in 146 BC at the conclusion of the Third Punic War.
-          </p>
-
-          <div class="pt-2.5 border-t border-ink/15 flex flex-wrap items-center justify-between gap-2 text-xs font-mono">
-            <span class="text-inkMuted">
-              Top fuel in archive: <strong id="result-paradox-example" class="text-plum">Nabataean Kingdom (+100 yrs)</strong>
-            </span>
-            <span id="result-pool-count" class="text-inkMuted">24 valid entries</span>
-          </div>
-        </div>
-
-        <div class="flex justify-end">
-          <button id="next-round-btn" type="button" class="tactile-btn w-full sm:w-auto px-7 py-3 rounded-xl bg-brass hover:bg-[#D68930] text-ink font-serif font-extrabold text-base cursor-pointer">
-            Proceed to Jump 2 →
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- ====================================================================== -->
-    <!-- SCREEN 3: END-OF-EXPEDITION CHRONO-DISPATCH TICKET                     -->
-    <!-- ====================================================================== -->
-    <section id="summary-screen" class="hidden instrument-card rounded-2xl p-5 sm:p-7 animate-stamp-in">
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b-2 border-ink">
-        <div>
-          <span class="text-xs font-mono font-bold uppercase tracking-widest text-brass block mb-1">
-            Official Telemetry Dispatch • 7 Jumps Logged
-          </span>
-          <h2 id="final-rank-title" class="font-serif text-2xl sm:text-3xl font-extrabold text-ink">
-            Chrononaut Navigator
-          </h2>
-          <p id="final-rank-subtitle" class="text-xs sm:text-sm text-inkMuted mt-0.5">
-            Your capsule burned 430 years of Chronal Fuel across 7 eras.
-          </p>
-        </div>
-
-        <div class="flex items-center gap-3 bg-paper px-4 py-3 rounded-xl border-2 border-ink shadow-[3px_3px_0px_#1C1B18] shrink-0">
-          <div>
-            <span class="text-[10px] font-mono font-bold uppercase text-inkMuted block">Final Arrival</span>
-            <span id="summary-final-year" class="font-mono font-extrabold text-xl sm:text-2xl text-ink">2456 AD</span>
-          </div>
-          <div class="h-8 w-[1.5px] bg-ink/25"></div>
-          <div>
-            <span class="text-[10px] font-mono font-bold uppercase text-inkMuted block">Total Fuel</span>
-            <span id="summary-total-score" class="font-mono font-bold text-base sm:text-lg text-verdigris">+0 / —y</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Jump-by-Jump Ledger -->
-      <div class="my-4">
-        <div class="flex items-center justify-between text-[11px] font-mono font-bold uppercase text-inkMuted mb-2 px-1">
-          <span>Jump &amp; Logged Answer</span>
-          <span>Fuel Distilled / Archive Max</span>
-        </div>
-        <div id="summary-breakdown-list" class="space-y-2 max-h-[300px] overflow-y-auto pr-1">
-          <!-- Populated dynamically -->
-        </div>
-      </div>
-
-      <!-- Share & Replay Actions -->
-      <div class="flex flex-col sm:flex-row items-center gap-3 pt-2">
-        <button id="copy-chronolog-btn" type="button" class="tactile-btn w-full sm:flex-1 py-3.5 px-5 rounded-xl bg-verdigris hover:bg-[#265E4F] text-paper font-serif font-bold text-base flex items-center justify-center gap-2 cursor-pointer">
-          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
-            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-          </svg>
-          <span>Copy Dispatch Card</span>
-        </button>
-
-        <button id="play-practice-btn" type="button" class="tactile-btn w-full sm:w-auto py-3.5 px-5 rounded-xl bg-paper hover:bg-paperDark text-ink font-serif font-bold text-base cursor-pointer">
-          Load Next Seed ↻
-        </button>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="w-full max-w-4xl mx-auto px-4 py-3 text-center text-[11px] text-inkMuted font-mono">
-    CHRONONAUT INSTRUMENTATION • PRESS <kbd class="px-1.5 py-0.5 bg-paperDark border border-ink rounded text-ink font-bold">ENTER</kbd> TO LOCK IN OR ADVANCE
-  </footer>
-
-  <!-- MANUAL / HOW TO PLAY MODAL -->
-  <div id="how-to-modal" class="hidden fixed inset-0 z-50 bg-ink/60 backdrop-blur-[2px] flex items-center justify-center p-4">
-    <div class="instrument-card w-full max-w-md rounded-2xl p-6 animate-stamp-in">
-      <div class="flex items-center justify-between pb-3 mb-3 border-b-2 border-ink/15">
-        <h3 class="font-serif font-extrabold text-xl text-ink">Operator’s Field Manual</h3>
-        <button id="close-modal-btn" type="button" class="text-ink hover:text-vermilion font-mono font-bold text-base px-2 py-0.5 cursor-pointer">✕</button>
-      </div>
-      <ul class="space-y-3 text-sm text-ink leading-relaxed mb-5">
-        <li class="flex gap-2.5">
-          <span class="font-mono font-bold text-brass">01.</span>
-          <span><strong>7 Temporal Jumps:</strong> Each expedition draws 7 unique pools from a 24-pool archive spanning 20 subject domains.</span>
-        </li>
-        <li class="flex gap-2.5">
-          <span class="font-mono font-bold text-verdigris">02.</span>
-          <span><strong>Points = Chronal Fuel:</strong> Every point your answer scores converts <strong>1-for-1 into Years of Fuel</strong> (+15 to +100 yrs) to push your capsule ahead from 2026 AD.</span>
-        </li>
-        <li class="flex gap-2.5">
-          <span class="font-mono font-bold text-prussian">03.</span>
-          <span><strong>Hunt Obscurity:</strong> Common answers give minimal thrust; rare answers fill your sight-glass and propel you centuries ahead.</span>
-        </li>
-        <li class="flex gap-2.5">
-          <span class="font-mono font-bold text-plum">04.</span>
-          <span><strong>Chrono-Freeze Switch:</strong> Once per run, pause the 25-second escapement timer for 10 seconds at a cost of 15 years of fuel.</span>
-        </li>
-      </ul>
-      <button id="got-it-btn" type="button" class="tactile-btn w-full py-2.5 rounded-xl bg-brass text-ink font-serif font-extrabold text-base cursor-pointer">
-        Return to Console
-      </button>
-    </div>
+    <div><div class="flex items-center gap-2"><h1 class="serif font-extrabold text-2xl tracking-tight">EURONAUT</h1><span class="badge-pill bg-paperDark">EUROPE EDITION</span></div><p class="text-xs text-inkMuted">Seven journeys. One continent. How far can you go?</p></div>
   </div>
-
-  <!-- TOAST NOTIFICATION -->
-  <div id="toast-banner" class="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 px-4 py-2.5 rounded-xl bg-ink text-paper border-2 border-brass text-xs font-mono font-bold shadow-[3px_3px_0px_#C87D28] opacity-0 pointer-events-none transition-opacity duration-200">
-    Dispatch copied to clipboard!
+  <div class="flex gap-2"><button id="how-btn" class="tactile-btn rounded-lg bg-paper px-3 py-2 text-xs mono">HOW TO PLAY</button><button id="new-run-btn" class="tactile-btn rounded-lg bg-paperDark px-3 py-2 text-xs mono">NEW DAILY RUN</button></div>
+</header>
+<main class="w-full max-w-4xl mx-auto px-4 py-3 flex-1 flex flex-col gap-4">
+<section class="instrument-card rounded-2xl p-3 sm:p-4">
+  <div class="grid grid-cols-3 gap-2 mb-3">
+    <div class="bg-paper border border-ink rounded-lg p-2"><div class="mono text-[10px] uppercase text-inkMuted">Current location</div><div id="current-country" class="serif font-bold text-base sm:text-lg">—</div><div id="current-capital" class="text-xs text-inkMuted">—</div></div>
+    <div class="bg-paper border border-ink rounded-lg p-2"><div class="mono text-[10px] uppercase text-inkMuted">Total distance</div><div id="total-distance" class="mono font-bold text-base sm:text-lg">0 km</div><div class="text-xs text-inkMuted">Capital to capital</div></div>
+    <div class="bg-paper border border-ink rounded-lg p-2"><div class="mono text-[10px] uppercase text-inkMuted">Places visited</div><div id="visited-count" class="mono font-bold text-base sm:text-lg">1</div><div class="text-xs text-inkMuted">Including start</div></div>
   </div>
-
-  <script src="data.js?v=20261122.4" defer></script>
-  <script src="question-engine.js?v=20261122.4" defer></script>
-  <script src="answer-engine.js?v=20261122.4" defer></script>
-  <script src="script.js?v=20261122.4" defer></script>
+  <div class="h-36 sm:h-48 rounded-xl border-2 border-ink overflow-hidden bg-[#D8E1D7] relative">
+    <canvas id="scene-canvas" width="640" height="240"></canvas>
+    <div class="absolute left-3 top-3 stamp rounded-md px-3 py-1"><div class="mono text-[9px] text-inkMuted">YOU ARE IN</div><div id="scene-country" class="serif font-extrabold text-lg">—</div></div>
+    <div class="absolute right-3 bottom-3 stamp rounded-md px-3 py-1 mono text-[10px]" id="scene-status">READY FOR DEPARTURE</div>
+  </div>
+  <div class="grid grid-cols-7 gap-2 mt-3" id="journey-progress"></div>
+  <div class="flex justify-between mt-2 mono text-[10px] text-inkMuted"><span>START</span><span>7 JOURNEYS</span><span>FINISH</span></div>
+</section>
+<section id="briefing" class="instrument-card rounded-2xl p-5 sm:p-7">
+  <div class="flex flex-wrap justify-between gap-2 mb-4"><span class="badge-pill bg-paperDark">DAILY EXPEDITION</span><span class="mono text-xs text-inkMuted" id="daily-date"></span></div>
+  <h2 class="serif font-extrabold text-3xl sm:text-4xl leading-tight mb-3">Your knowledge is your passport.</h2>
+  <p class="text-sm sm:text-base text-inkMuted leading-relaxed mb-5">Start in <strong id="briefing-start">—</strong>. Answer seven questions about Europe. Every correct answer takes your traveller's machine to the country you name. Every wrong answer costs that journey — but the expedition continues.</p>
+  <div class="grid sm:grid-cols-3 gap-2 mb-5">
+    <div class="bg-paper rounded-xl border border-ink p-3"><div class="mono text-xs font-bold">7 JOURNEYS</div><p class="text-xs text-inkMuted mt-1">Exactly seven questions per run.</p></div>
+    <div class="bg-paper rounded-xl border border-ink p-3"><div class="mono text-xs font-bold">ONE ATTEMPT</div><p class="text-xs text-inkMuted mt-1">No retries. A wrong answer moves to the next question.</p></div>
+    <div class="bg-paper rounded-xl border border-ink p-3"><div class="mono text-xs font-bold">NO TIMER</div><p class="text-xs text-inkMuted mt-1">Think carefully. Distance is the score.</p></div>
+  </div>
+  <button id="start-btn" class="tactile-btn rounded-xl bg-brass px-7 py-3.5 serif font-extrabold text-lg w-full sm:w-auto">Start expedition →</button>
+</section>
+<section id="game-panel" class="hidden instrument-card rounded-2xl p-5 sm:p-7">
+  <div class="flex flex-wrap items-center justify-between gap-2 pb-4 mb-4 border-b border-ink/20"><span id="turn-label" class="badge-pill bg-ink text-paper">JOURNEY 1 / 7</span><span id="question-category" class="badge-pill bg-paperDark">GEOGRAPHY</span></div>
+  <div class="mb-5"><h2 id="question-prompt" class="serif text-2xl sm:text-3xl font-extrabold leading-snug">Question</h2><p id="question-hint" class="text-sm text-inkMuted mt-2"></p></div>
+  <form id="answer-form" class="flex flex-col sm:flex-row gap-2"><input id="answer-input" class="min-w-0 flex-1 rounded-xl border-2 border-ink bg-white px-4 py-3.5 text-base outline-none focus:ring-2 focus:ring-brass" placeholder="Type a country..." autocomplete="off" spellcheck="false"><button class="tactile-btn rounded-xl bg-brass px-6 py-3.5 serif font-extrabold">Travel →</button></form>
+  <p id="answer-message" class="text-sm mt-3 min-h-5 text-inkMuted">One answer. Choose your destination wisely.</p>
+  <div id="feedback-panel" class="hidden mt-5 bg-paper border-2 border-ink rounded-xl p-4">
+    <div class="flex flex-wrap justify-between items-start gap-3"><div><div id="feedback-kicker" class="mono text-xs text-inkMuted mb-1">ARRIVAL CONFIRMED</div><div id="feedback-title" class="serif font-extrabold text-2xl">—</div><div id="feedback-route" class="mono text-xs text-inkMuted mt-1">—</div></div><div class="stamp rounded-xl p-3 text-right"><div class="mono text-[10px] text-inkMuted">DISTANCE</div><div id="feedback-distance" class="mono font-bold text-xl">—</div><div id="feedback-badge" class="text-xs font-bold mt-1">—</div></div></div>
+    <p id="feedback-detail" class="text-sm mt-3 text-inkMuted"></p><button id="continue-btn" class="tactile-btn rounded-xl bg-brass px-6 py-3 mt-4 serif font-extrabold w-full sm:w-auto">Next question →</button>
+  </div>
+</section>
+<section id="summary-panel" class="hidden instrument-card rounded-2xl p-5 sm:p-7">
+  <span class="badge-pill bg-paperDark">EXPEDITION COMPLETE</span><h2 class="serif text-3xl sm:text-4xl font-extrabold mt-3">Journey's end.</h2><p class="text-inkMuted mt-2">Your European expedition has come to a close.</p>
+  <div class="bg-ink text-paper rounded-xl p-5 mt-5"><div class="mono text-xs text-paper/70">TOTAL DISTANCE TRAVELLED</div><div id="final-distance" class="serif text-4xl sm:text-5xl font-extrabold mt-1">0 km</div><div id="final-countries" class="mono text-xs text-paper/70 mt-2">1 place visited</div></div>
+  <div id="journey-recap" class="space-y-2 mt-5"></div><button id="share-btn" class="tactile-btn rounded-xl bg-brass px-6 py-3 mt-5 serif font-extrabold w-full sm:w-auto">Copy expedition result</button><button id="replay-btn" class="tactile-btn rounded-xl bg-paper px-6 py-3 mt-5 ml-0 sm:ml-2 serif font-bold">Play again</button>
+</section>
+<footer class="text-center text-xs text-inkMuted py-2">EURONAUT · EUROPE EDITION · BUILT FOR CURIOUS MINDS</footer>
+</main>
+<div id="how-modal" class="hidden fixed inset-0 bg-ink/60 z-50 p-4 flex items-center justify-center"><div class="instrument-card rounded-2xl max-w-lg w-full p-6"><div class="flex justify-between items-center"><h2 class="serif text-2xl font-extrabold">How to play</h2><button id="close-how" class="mono text-xl">×</button></div><ul class="list-disc pl-5 mt-4 space-y-2 text-sm text-inkMuted"><li>Every daily run has seven questions and no time limit.</li><li>You get one attempt per question. A wrong answer means no travel, then the next question.</li><li>Correct answers take you to the country or territory you named.</li><li>Distance is measured between capital coordinates using great-circle distance.</li><li>You cannot visit the same destination twice.</li><li>Badges are awarded for each successful jump; the final score is the sum of kilometres travelled.</li></ul></div></div>
+<script src="euronaut.js"></script>
 </body>
 </html>
